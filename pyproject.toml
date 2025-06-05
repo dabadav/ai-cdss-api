@@ -1,0 +1,22 @@
+[project]
+name = "ai-cdss-api"
+version = "0.1.0"
+description = "The FastAPI to interface with AI-CDSS Engine"
+authors = [
+    {name = "Eodyne Systems SL"}
+]
+license = {text = "MIT"}
+readme = "README.md"
+requires-python = ">=3.12"
+dependencies = [
+    "rgs_interface @ git+https://github.com/dabadav/rgs-interface.git@v0.3.0",
+    "ai_cdss @ git+https://github.com/dabadav/ai_cdss.git@v0.1.2",
+]
+
+[tool.poetry]
+packages = [{include = "ai_cdss_api", from = "src"}]
+
+
+[build-system]
+requires = ["poetry-core>=2.0.0,<3.0.0"]
+build-backend = "poetry.core.masonry.api"
