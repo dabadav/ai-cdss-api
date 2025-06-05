@@ -1,9 +1,9 @@
 from fastapi import FastAPI, Depends
 from contextlib import asynccontextmanager
-from typing import List
-from config import Settings
-from dependencies import get_settings
-from schemas import RecommendationRequest, RecommendationOut, RGSMode
+
+from ai_cdss_api.config import Settings
+from ai_cdss_api.dependencies import get_settings
+from ai_cdss_api.schemas import RecommendationRequest, RGSMode
 
 from ai_cdss.cdss import CDSS
 from ai_cdss.data_loader import DataLoader

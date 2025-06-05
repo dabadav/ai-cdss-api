@@ -1,5 +1,5 @@
 # dependencies.py
-from config import Settings
+from ai_cdss_api.config import Settings
 
 def get_settings() -> Settings:
     return Settings()
