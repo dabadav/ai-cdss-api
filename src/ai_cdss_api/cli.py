@@ -5,7 +5,7 @@ import uvicorn
 cli = typer.Typer()
 
 @cli.command()
-def runserver(
+def run(
     host: str = "127.0.0.1",
     port: int = 8000,
     reload: bool = True
