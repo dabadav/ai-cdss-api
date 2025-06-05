@@ -4,8 +4,16 @@
 
 Install directly from GitHub:
 
+- Lastest release:
+
 ```bash
 pip install "git+https://github.com/dabadav/ai-cdss-api.git@v0.1.0"
+```
+
+- Lastest commit in `main` branch:
+
+```bash
+pip install "git+https://github.com/dabadav/ai-cdss-api.git@main"
 ```
 
 ### Usage - CLI Entrypoint
