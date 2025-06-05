@@ -19,7 +19,7 @@ dependencies = [
 ]
 
 [tool.poetry.scripts]
-ai-cdss-api = "ai_cdss_api.cli:cli"
+ai-cdss = "ai_cdss_api.cli:cli"
 
 [tool.poetry]
 packages = [{include = "ai_cdss_api", from = "src"}]
