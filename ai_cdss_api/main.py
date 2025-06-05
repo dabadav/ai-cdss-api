@@ -5,10 +5,6 @@ from config import Settings
 from dependencies import get_settings
 from schemas import RecommendationRequest, RecommendationOut, RGSMode
 
-
-import sys
-sys.path.append("../src")
-
 from ai_cdss.cdss import CDSS
 from ai_cdss.data_loader import DataLoader
 from ai_cdss.data_processor import DataProcessor
