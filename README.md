@@ -30,9 +30,47 @@ Option | Description | Default
 --port | Port number to bind | 8000
 --reload / --no-reload | Enable or disable auto-reload | --reload
 
-
 Once started, visit:
 ```
 http://<host>:<port>/docs
 ```
 to access the interactive Swagger API docs.
+
+### Set up Daemon (Linux)
+
+```bash
+sudo nano /etc/systemd/system/cdss.service
+```
+
+Example `cdss.service`
+
+```
+[Unit]
+Description=AI CDSS FastAPI Service
+After=network.target
+
+[Service]
+User=dav
+ExecStart=/home/dav/miniforge3/envs/cdss-test/bin/ai-cdss --host 127.0.0.1 --port 8000
+Restart=always
+RestartSec=5
+StandardOutput=journal
+StandardError=journal
+
+[Install]
+WantedBy=multi-user.target
+```
+
+Enable and start the daemon
+
+```bash
+sudo systemctl daemon-reload
+sudo systemctl enable cdss
+sudo systemctl start cdss
+```
+
+To monitor the output (real-time)
+
+```bash
+sudo journalctl -u cdss -f
+```
