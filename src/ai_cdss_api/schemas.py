@@ -52,5 +52,5 @@ class RecommendationRequest(BaseModel):
     def validate_positive_integers(cls, v, field):
         if v is not None:
             if not isinstance(v, int) or v <= 0:
-                raise ValueError(f"{field.name} must be a positive integer")
+                raise ValueError(f"{field.alias} must be a positive integer")
         return v
