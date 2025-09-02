@@ -87,8 +87,8 @@ async def compute_metrics(
     request: Request,
 ):
     """
-    Computes Patient-Protocol Fit (PPF) and Protocol Similarity based on loaded data.
-    Returns the computed PPF with contributions and the protocol similarity matrix.
+    Computes Patient-Protocol Fit (PPF) based on loaded data.
+    Returns the computed PPF with contributions.
     """
     try:
         cdss = CDSSInterface(
