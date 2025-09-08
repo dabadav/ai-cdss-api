@@ -7,7 +7,7 @@ Install directly from GitHub:
 - Lastest release:
 
 ```bash
-pip install "git+https://github.com/dabadav/ai-cdss-api.git@v0.1.2"
+pip install "git+https://github.com/dabadav/ai-cdss-api.git@v0.1.21"
 ```
 
 - Lastest commit in `main` branch:
@@ -82,3 +82,4 @@ To monitor the output (real-time)
 ```bash
 sudo journalctl -u cdss -f
 ```
+
