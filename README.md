@@ -7,7 +7,7 @@ Install directly from GitHub:
 - Lastest release:
 
 ```bash
-pip install "git+https://github.com/dabadav/ai-cdss-api.git@v0.1.21"
+pip install "git+https://github.com/dabadav/ai-cdss-api.git@v0.1.22"
 ```
 
 - Lastest commit in `main` branch:
