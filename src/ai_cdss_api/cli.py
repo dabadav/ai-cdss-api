@@ -1,8 +1,10 @@
 # ai_cdss_api/cli.py
 import logging
+from pathlib import Path
 
 import typer
 import uvicorn
+from dotenv import load_dotenv
 
 logger = logging.getLogger(__name__)
 
@@ -21,8 +23,19 @@ def run(
         help="Additional directories to watch for reload. Can be specified multiple times.",
         rich_help_panel="Reload Options",
     ),
+    env_file: Path | None = typer.Option(
+        None, "--env-file", "-e", help="Path to a .env file (optional)"
+    ),
 ):
     """Start the FastAPI server."""
+
+    # Load .env into process env so Pydantic can read it
+    if env_file and env_file.exists():
+        load_dotenv(env_file, override=False)
+    else:
+        # Optional: try a local .env if present
+        load_dotenv(".env", override=False)
+
     uvicorn.run(
         "ai_cdss_api.main:app",
         host=host,

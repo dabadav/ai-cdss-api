@@ -2,7 +2,7 @@
 
 [[package]]
 name = "ai-cdss"
-version = "0.2.0"
+version = "0.2.1"
 description = "The EOD Clinical Decision Support System uses RGS data, and patient clinical scores (ARAT, MoCA) to provide data-driven recommendation to clinicians of the best RGS activities a patient should perform."
 optional = false
 python-versions = ">=3.12,<4.0"
@@ -14,15 +14,15 @@ develop = false
 gower = ">=0.1.2,<0.2.0"
 pandas = {version = ">=2.2.3,<3.0.0", extras = ["parquet"]}
 pandera = ">=0.23.1,<0.24.0"
-rgs_interface = {git = "https://github.com/dabadav/rgs-interface.git", rev = "v0.4.0"}
+rgs_interface = {git = "https://github.com/dabadav/rgs-interface.git", rev = "v0.4.1"}
 scikit-learn = ">=1.6.1,<2.0.0"
 scipy = ">=1.15.3,<2.0.0"
 
 [package.source]
 type = "git"
 url = "https://github.com/dabadav/ai-cdss.git"
-reference = "v0.2.0"
-resolved_reference = "ff9b902a214b0db43d4d73f988089bd85cd0509a"
+reference = "v0.2.1"
+resolved_reference = "3ffa1ea782f2b1eaa5bc8967b0adccab1776ba57"
 
 [[package]]
 name = "annotated-types"
@@ -1250,7 +1250,7 @@ files = [
 
 [[package]]
 name = "rgs-interface"
-version = "0.4.0"
+version = "0.4.1"
 description = "Fetch data from Eodyne production database"
 optional = false
 python-versions = ">=3.12,<4.0"
@@ -1273,8 +1273,8 @@ typer = ">=0.16.0,<0.17.0"
 [package.source]
 type = "git"
 url = "https://github.com/dabadav/rgs-interface.git"
-reference = "v0.4.0"
-resolved_reference = "a3b055abf2f7abd4b721efc6453f785d486a26a0"
+reference = "v0.4.1"
+resolved_reference = "3c8f8e3c80e4e5a254caac1df38bdfb603b0dc72"
 
 [[package]]
 name = "rich"
@@ -1694,4 +1694,4 @@ standard = ["colorama (>=0.4) ; sys_platform == \"win32\"", "httptools (>=0.6.3)
 [metadata]
 lock-version = "2.1"
 python-versions = ">=3.12,<4.0"
-content-hash = "1ee1a001a1352030e5ae46498a49f5c665a3a9aad9c605cdb829ff9f47873615"
+content-hash = "642952d6c491c5201c1590daa851a12d69404bbace03d523fb3a687dbb99845a"
