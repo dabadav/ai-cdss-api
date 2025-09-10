@@ -27,7 +27,7 @@ This will start the FastAPI Server
 
 #### Customize how the API server runs:
 ```bash
-ai-cdss --host 0.0.0.0 --port 8080 --reload
+ai-cdss --host 0.0.0.0 --port 8080 --reload --env-file .env.prod
 ```
 
 ##### Available Options
@@ -37,6 +37,8 @@ Option | Description | Default
 --host | Host IP address to bind | 127.0.0.1
 --port | Port number to bind | 8000
 --reload / --no-reload | Enable or disable auto-reload | --reload
+--reload-dir / -rd | Additional directories to watch for reload | None
+--env-file / -e | Path to the .env file (Optional) | None
 
 Once started, visit:
 ```
@@ -82,4 +84,5 @@ To monitor the output (real-time)
 ```bash
 sudo journalctl -u cdss -f
 ```
+
 
