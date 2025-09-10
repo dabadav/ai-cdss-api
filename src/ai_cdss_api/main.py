@@ -34,7 +34,7 @@ async def lifespan(app: FastAPI):
 app = FastAPI(
     title="AI-CDSS API",
     description="Clinical Decision Support System (CDSS) for personalized rehabilitation protocol recommendations.",
-    version="1.0.0",
+    version="0.1.3",
     lifespan=lifespan,
     contact={"name": "Eodyne Systems", "email": "contact@eodyne.com"},
     license_info={
