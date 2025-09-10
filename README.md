@@ -46,6 +46,23 @@ http://<host>:<port>/docs
 ```
 to access the interactive Swagger API docs.
 
+##### Example .env file
+
+```
+# CDSS Parameters
+WEIGHTS=[1,1,1]
+ALPHA=0.5
+N=12
+DAYS=7
+PROTOCOLS_PER_DAY=5
+
+# DB Credentials
+DB_HOST=prod-db.internal
+DB_USER=app
+DB_PASS=supersecret
+DB_NAME=ai
+```
+
 ### Set up Daemon (Linux)
 
 ```bash
@@ -84,5 +101,6 @@ To monitor the output (real-time)
 ```bash
 sudo journalctl -u cdss -f
 ```
+
 
 
