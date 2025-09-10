@@ -106,6 +106,34 @@ async def compute_metrics(
         ) from e
 
 
+@app.post(
+    "/compute_protocol_metrics",
+    summary="Compute Protocol Similarity Metrics",
+    tags=["Recommendations"],
+)
+async def compute_protocol_metrics(
+    request: Request,
+):
+    """
+    Computes Protocol Similarity Metrics based on loaded data.
+    Returns the computed similarity metrics.
+    """
+    try:
+        cdss = CDSSInterface(
+            loader=request.app.state.loader, processor=request.app.state.processor
+        )
+        return cdss.compute_protocol_similarity()
+
+    except ValueError as ve:
+        raise HTTPException(status_code=404, detail=str(ve)) from ve
+    except RuntimeError as re:
+        raise HTTPException(status_code=500, detail=str(re)) from re
+    except Exception as e:
+        raise HTTPException(
+            status_code=500, detail=f"Unexpected error: {str(e)}"
+        ) from e
+
+
 @app.get("/", include_in_schema=False)
 def root():
     return {"status": "ok"}
